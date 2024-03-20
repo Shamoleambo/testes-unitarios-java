@@ -1,6 +1,5 @@
 package br.ce.wcaquino.servicos;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,9 +15,9 @@ public class LocacaoServiceTest {
 		LocacaoService service = new LocacaoService();
 		Usuario usuario = new Usuario("Mano");
 		Filme filme = new Filme("Filme 1", 2, 5.0);
-		
+
 		Locacao locacao = service.alugarFilme(usuario, filme);
 
-		Assert.assertTrue(locacao.getValor() == 5.0);
+		Assert.assertEquals(5.0, locacao.getValor(), 0.01);
 	}
 }
